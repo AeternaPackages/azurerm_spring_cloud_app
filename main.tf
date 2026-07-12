@@ -5,7 +5,7 @@ locals {
     for k1, v1 in var.spring_cloud_apps : {
       for k2, v2 in coalesce(v1.spring_cloud_active_deployments, {}) :
       "${k1}/${k2}" => merge(v2, {
-        spring_cloud_app_id = module.spring_cloud_apps.spring_cloud_apps["${k1}"].id
+        spring_cloud_app_id = module.spring_cloud_apps.spring_cloud_apps_id["${k1}"]
       })
     }
   ]...)
@@ -14,7 +14,7 @@ locals {
     for k1, v1 in var.spring_cloud_apps : {
       for k2, v2 in coalesce(v1.spring_cloud_app_cosmosdb_associations, {}) :
       "${k1}/${k2}" => merge(v2, {
-        spring_cloud_app_id = module.spring_cloud_apps.spring_cloud_apps["${k1}"].id
+        spring_cloud_app_id = module.spring_cloud_apps.spring_cloud_apps_id["${k1}"]
       })
     }
   ]...)
@@ -23,7 +23,7 @@ locals {
     for k1, v1 in var.spring_cloud_apps : {
       for k2, v2 in coalesce(v1.spring_cloud_app_mysql_associations, {}) :
       "${k1}/${k2}" => merge(v2, {
-        spring_cloud_app_id = module.spring_cloud_apps.spring_cloud_apps["${k1}"].id
+        spring_cloud_app_id = module.spring_cloud_apps.spring_cloud_apps_id["${k1}"]
       })
     }
   ]...)
@@ -32,7 +32,7 @@ locals {
     for k1, v1 in var.spring_cloud_apps : {
       for k2, v2 in coalesce(v1.spring_cloud_app_redis_associations, {}) :
       "${k1}/${k2}" => merge(v2, {
-        spring_cloud_app_id = module.spring_cloud_apps.spring_cloud_apps["${k1}"].id
+        spring_cloud_app_id = module.spring_cloud_apps.spring_cloud_apps_id["${k1}"]
       })
     }
   ]...)
@@ -41,7 +41,7 @@ locals {
     for k1, v1 in var.spring_cloud_apps : {
       for k2, v2 in coalesce(v1.spring_cloud_build_deployments, {}) :
       "${k1}/${k2}" => merge(v2, {
-        spring_cloud_app_id = module.spring_cloud_apps.spring_cloud_apps["${k1}"].id
+        spring_cloud_app_id = module.spring_cloud_apps.spring_cloud_apps_id["${k1}"]
       })
     }
   ]...)
@@ -50,7 +50,7 @@ locals {
     for k1, v1 in var.spring_cloud_apps : {
       for k2, v2 in coalesce(v1.spring_cloud_container_deployments, {}) :
       "${k1}/${k2}" => merge(v2, {
-        spring_cloud_app_id = module.spring_cloud_apps.spring_cloud_apps["${k1}"].id
+        spring_cloud_app_id = module.spring_cloud_apps.spring_cloud_apps_id["${k1}"]
       })
     }
   ]...)
@@ -59,7 +59,7 @@ locals {
     for k1, v1 in var.spring_cloud_apps : {
       for k2, v2 in coalesce(v1.spring_cloud_custom_domains, {}) :
       "${k1}/${k2}" => merge(v2, {
-        spring_cloud_app_id = module.spring_cloud_apps.spring_cloud_apps["${k1}"].id
+        spring_cloud_app_id = module.spring_cloud_apps.spring_cloud_apps_id["${k1}"]
       })
     }
   ]...)
@@ -68,7 +68,7 @@ locals {
     for k1, v1 in var.spring_cloud_apps : {
       for k2, v2 in coalesce(v1.spring_cloud_java_deployments, {}) :
       "${k1}/${k2}" => merge(v2, {
-        spring_cloud_app_id = module.spring_cloud_apps.spring_cloud_apps["${k1}"].id
+        spring_cloud_app_id = module.spring_cloud_apps.spring_cloud_apps_id["${k1}"]
       })
     }
   ]...)
