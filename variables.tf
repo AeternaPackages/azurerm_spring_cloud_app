@@ -36,6 +36,8 @@ Nested spring_cloud_app_mysql_associations (azurerm_spring_cloud_app_mysql_assoc
         - mysql_server_id
         - name
         - password
+        - password_key_vault_id (alternative to password - read from Key Vault instead)
+        - password_key_vault_secret_name (alternative to password - read from Key Vault instead)
         - username
 Nested spring_cloud_app_redis_associations (azurerm_spring_cloud_app_redis_association):
     Required:
@@ -131,11 +133,13 @@ EOT
       cosmosdb_sql_database_name       = optional(string)
     })))
     spring_cloud_app_mysql_associations = optional(map(object({
-      database_name   = string
-      mysql_server_id = string
-      name            = string
-      password        = string
-      username        = string
+      database_name                  = string
+      mysql_server_id                = string
+      name                           = string
+      password                       = string
+      password_key_vault_id          = optional(string)
+      password_key_vault_secret_name = optional(string)
+      username                       = string
     })))
     spring_cloud_app_redis_associations = optional(map(object({
       name             = string
