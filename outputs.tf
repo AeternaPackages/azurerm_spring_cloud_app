@@ -1,4 +1,9 @@
 # --- azurerm_spring_cloud_app ---
+output "spring_cloud_apps_id" {
+  description = "Map of id values across all spring_cloud_apps, keyed the same as var.spring_cloud_apps"
+  value       = module.spring_cloud_apps.spring_cloud_apps_id
+}
+
 output "spring_cloud_apps_addon_json" {
   description = "Map of addon_json values across all spring_cloud_apps, keyed the same as var.spring_cloud_apps"
   value       = module.spring_cloud_apps.spring_cloud_apps_addon_json
@@ -70,6 +75,11 @@ output "spring_cloud_apps_url" {
 }
 
 # --- azurerm_spring_cloud_active_deployment ---
+output "spring_cloud_active_deployments_id" {
+  description = "Map of id values across all spring_cloud_active_deployments, keyed the same as var.spring_cloud_active_deployments"
+  value       = module.spring_cloud_active_deployments.spring_cloud_active_deployments_id
+}
+
 output "spring_cloud_active_deployments_deployment_name" {
   description = "Map of deployment_name values across all spring_cloud_active_deployments, keyed the same as var.spring_cloud_active_deployments"
   value       = module.spring_cloud_active_deployments.spring_cloud_active_deployments_deployment_name
@@ -81,6 +91,11 @@ output "spring_cloud_active_deployments_spring_cloud_app_id" {
 }
 
 # --- azurerm_spring_cloud_app_cosmosdb_association ---
+output "spring_cloud_app_cosmosdb_associations_id" {
+  description = "Map of id values across all spring_cloud_app_cosmosdb_associations, keyed the same as var.spring_cloud_app_cosmosdb_associations"
+  value       = module.spring_cloud_app_cosmosdb_associations.spring_cloud_app_cosmosdb_associations_id
+}
+
 output "spring_cloud_app_cosmosdb_associations_api_type" {
   description = "Map of api_type values across all spring_cloud_app_cosmosdb_associations, keyed the same as var.spring_cloud_app_cosmosdb_associations"
   value       = module.spring_cloud_app_cosmosdb_associations.spring_cloud_app_cosmosdb_associations_api_type
@@ -132,6 +147,11 @@ output "spring_cloud_app_cosmosdb_associations_spring_cloud_app_id" {
 }
 
 # --- azurerm_spring_cloud_app_mysql_association ---
+output "spring_cloud_app_mysql_associations_id" {
+  description = "Map of id values across all spring_cloud_app_mysql_associations, keyed the same as var.spring_cloud_app_mysql_associations"
+  value       = module.spring_cloud_app_mysql_associations.spring_cloud_app_mysql_associations_id
+}
+
 output "spring_cloud_app_mysql_associations_database_name" {
   description = "Map of database_name values across all spring_cloud_app_mysql_associations, keyed the same as var.spring_cloud_app_mysql_associations"
   value       = module.spring_cloud_app_mysql_associations.spring_cloud_app_mysql_associations_database_name
@@ -164,6 +184,11 @@ output "spring_cloud_app_mysql_associations_username" {
 }
 
 # --- azurerm_spring_cloud_app_redis_association ---
+output "spring_cloud_app_redis_associations_id" {
+  description = "Map of id values across all spring_cloud_app_redis_associations, keyed the same as var.spring_cloud_app_redis_associations"
+  value       = module.spring_cloud_app_redis_associations.spring_cloud_app_redis_associations_id
+}
+
 output "spring_cloud_app_redis_associations_name" {
   description = "Map of name values across all spring_cloud_app_redis_associations, keyed the same as var.spring_cloud_app_redis_associations"
   value       = module.spring_cloud_app_redis_associations.spring_cloud_app_redis_associations_name
@@ -190,6 +215,11 @@ output "spring_cloud_app_redis_associations_ssl_enabled" {
 }
 
 # --- azurerm_spring_cloud_build_deployment ---
+output "spring_cloud_build_deployments_id" {
+  description = "Map of id values across all spring_cloud_build_deployments, keyed the same as var.spring_cloud_build_deployments"
+  value       = module.spring_cloud_build_deployments.spring_cloud_build_deployments_id
+}
+
 output "spring_cloud_build_deployments_addon_json" {
   description = "Map of addon_json values across all spring_cloud_build_deployments, keyed the same as var.spring_cloud_build_deployments"
   value       = module.spring_cloud_build_deployments.spring_cloud_build_deployments_addon_json
@@ -231,6 +261,11 @@ output "spring_cloud_build_deployments_spring_cloud_app_id" {
 }
 
 # --- azurerm_spring_cloud_container_deployment ---
+output "spring_cloud_container_deployments_id" {
+  description = "Map of id values across all spring_cloud_container_deployments, keyed the same as var.spring_cloud_container_deployments"
+  value       = module.spring_cloud_container_deployments.spring_cloud_container_deployments_id
+}
+
 output "spring_cloud_container_deployments_addon_json" {
   description = "Map of addon_json values across all spring_cloud_container_deployments, keyed the same as var.spring_cloud_container_deployments"
   value       = module.spring_cloud_container_deployments.spring_cloud_container_deployments_addon_json
@@ -292,6 +327,11 @@ output "spring_cloud_container_deployments_spring_cloud_app_id" {
 }
 
 # --- azurerm_spring_cloud_custom_domain ---
+output "spring_cloud_custom_domains_id" {
+  description = "Map of id values across all spring_cloud_custom_domains, keyed the same as var.spring_cloud_custom_domains"
+  value       = module.spring_cloud_custom_domains.spring_cloud_custom_domains_id
+}
+
 output "spring_cloud_custom_domains_certificate_name" {
   description = "Map of certificate_name values across all spring_cloud_custom_domains, keyed the same as var.spring_cloud_custom_domains"
   value       = module.spring_cloud_custom_domains.spring_cloud_custom_domains_certificate_name
@@ -313,6 +353,11 @@ output "spring_cloud_custom_domains_thumbprint" {
 }
 
 # --- azurerm_spring_cloud_java_deployment ---
+output "spring_cloud_java_deployments_id" {
+  description = "Map of id values across all spring_cloud_java_deployments, keyed the same as var.spring_cloud_java_deployments"
+  value       = module.spring_cloud_java_deployments.spring_cloud_java_deployments_id
+}
+
 output "spring_cloud_java_deployments_environment_variables" {
   description = "Map of environment_variables values across all spring_cloud_java_deployments, keyed the same as var.spring_cloud_java_deployments"
   value       = module.spring_cloud_java_deployments.spring_cloud_java_deployments_environment_variables
