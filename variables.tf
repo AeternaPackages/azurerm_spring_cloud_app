@@ -92,14 +92,14 @@ EOT
     resource_group_name     = string
     service_name            = string
     addon_json              = optional(string)
-    https_only              = optional(bool) # Default: false
-    is_public               = optional(bool) # Default: false
+    https_only              = optional(bool)
+    is_public               = optional(bool)
     public_endpoint_enabled = optional(bool)
-    tls_enabled             = optional(bool) # Default: false
+    tls_enabled             = optional(bool)
     custom_persistent_disk = optional(list(object({
       mount_options     = optional(set(string))
       mount_path        = string
-      read_only_enabled = optional(bool) # Default: false
+      read_only_enabled = optional(bool)
       share_name        = string
       storage_name      = string
     })))
@@ -108,14 +108,14 @@ EOT
       type         = string
     }))
     ingress_settings = optional(object({
-      backend_protocol        = optional(string) # Default: "Default"
-      read_timeout_in_seconds = optional(number) # Default: 300
-      send_timeout_in_seconds = optional(number) # Default: 60
-      session_affinity        = optional(string) # Default: "None"
+      backend_protocol        = optional(string)
+      read_timeout_in_seconds = optional(number)
+      send_timeout_in_seconds = optional(number)
+      session_affinity        = optional(string)
       session_cookie_max_age  = optional(number)
     }))
     persistent_disk = optional(object({
-      mount_path = optional(string) # Default: "/persistent"
+      mount_path = optional(string)
       size_in_gb = number
     }))
     spring_cloud_active_deployments = optional(map(object({
@@ -145,7 +145,7 @@ EOT
       name             = string
       redis_access_key = string
       redis_cache_id   = string
-      ssl_enabled      = optional(bool) # Default: true
+      ssl_enabled      = optional(bool)
     })))
     spring_cloud_build_deployments = optional(map(object({
       build_result_id                        = string
@@ -153,7 +153,7 @@ EOT
       addon_json                             = optional(string)
       application_performance_monitoring_ids = optional(list(string))
       environment_variables                  = optional(map(string))
-      instance_count                         = optional(number) # Default: 1
+      instance_count                         = optional(number)
       quota = optional(object({
         cpu    = optional(string)
         memory = optional(string)
@@ -168,7 +168,7 @@ EOT
       arguments                              = optional(list(string))
       commands                               = optional(list(string))
       environment_variables                  = optional(map(string))
-      instance_count                         = optional(number) # Default: 1
+      instance_count                         = optional(number)
       language_framework                     = optional(string)
       quota = optional(object({
         cpu    = optional(string)
@@ -183,9 +183,9 @@ EOT
     spring_cloud_java_deployments = optional(map(object({
       name                  = string
       environment_variables = optional(map(string))
-      instance_count        = optional(number) # Default: 1
+      instance_count        = optional(number)
       jvm_options           = optional(string)
-      runtime_version       = optional(string) # Default: "Java_8"
+      runtime_version       = optional(string)
       quota = optional(object({
         cpu    = optional(string)
         memory = optional(string)
